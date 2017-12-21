@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:config/sys.properties"/>
+    <context:component-scan base-package="com.cmazxiaoma.demo.controller"/>
+
+    <!--试图解析器；开发期间cache-views设置为false，生产期间请设置为true提高性能-->
+    <mvc:view-resolvers>
+        <mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp" cache-views="false"/>
+    </mvc:view-resolvers>
+
+</beans>
