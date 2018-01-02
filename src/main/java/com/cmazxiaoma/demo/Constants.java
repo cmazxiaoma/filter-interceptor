@@ -5,4 +5,5 @@ package com.cmazxiaoma.demo;
  * everyday is mayday.
  */
 public interface Constants {
+
 }
