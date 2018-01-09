@@ -40,7 +40,7 @@
     <!-- 配置事务切面 -->
     <aop:config>
         <aop:pointcut id="serviceOperation"
-                      expression="execution(* cn.com.header..service.*.*(..))"/>
+                      expression="execution(* com.cmazxiaoma.demo.service.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
     </aop:config>
     <context:annotation-config/>
